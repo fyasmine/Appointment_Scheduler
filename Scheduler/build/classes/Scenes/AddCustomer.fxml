@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="562.0" prefWidth="394.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Button fx:id="addCustomerFinal" layoutX="245.0" layoutY="435.0" mnemonicParsing="false" onMouseClicked="#addCustomerFinal" prefHeight="26.0" prefWidth="98.0" text="Add" />
+            <TextField fx:id="addName" layoutX="172.0" layoutY="143.0" promptText="Name" />
+            <Label layoutX="42.0" layoutY="147.0" text="Name *" />
+            <Label layoutX="108.0" layoutY="33.0" text="Add Customer">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="182.0" text="Address *" />
+            <Label layoutX="42.0" layoutY="253.0" text="City *" />
+            <Label layoutX="42.0" layoutY="289.0" text="Country *" />
+            <Label layoutX="42.0" layoutY="324.0" text="Postal Code *" />
+            <Label layoutX="42.0" layoutY="359.0" text="Phone Number *" />
+            <TextField fx:id="address" layoutX="172.0" layoutY="178.0" promptText="Address" />
+            <TextField fx:id="city" layoutX="172.0" layoutY="249.0" promptText="City" />
+            <TextField fx:id="country" layoutX="172.0" layoutY="285.0" promptText="Country" />
+            <TextField fx:id="postalCode" layoutX="172.0" layoutY="320.0" promptText="Postal Code" />
+            <TextField fx:id="phone" layoutX="172.0" layoutY="355.0" promptText="Phone Number" />
+            <Button fx:id="addCustomerCancel" layoutX="284.0" layoutY="487.0" mnemonicParsing="false" onMouseClicked="#addCustomerCancel" prefHeight="26.0" prefWidth="71.0" text="Cancel" />
+            <TextField fx:id="customerId" editable="false" layoutX="172.0" layoutY="108.0" promptText="Auto Gen - Cust ID" style="-fx-background-color: gray;" />
+            <Label layoutX="42.0" layoutY="112.0" text="Customer ID" />
+            <Label layoutX="42.0" layoutY="217.0" text="Address 2" />
+            <TextField fx:id="address2" layoutX="172.0" layoutY="213.0" promptText="Address 2" />
+            <Label layoutX="40.0" layoutY="491.0" text="* Required Fields" />
+            <RadioButton fx:id="active" layoutX="172.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#active" text="Active" />
+            <RadioButton fx:id="inactive" layoutX="263.0" layoutY="396.0" mnemonicParsing="false" onMouseClicked="#inactive" text="Inactive" />
+            <Label layoutX="46.0" layoutY="396.0" text="Status *" />
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>
