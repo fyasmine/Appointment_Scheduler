@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="600.0" prefWidth="1589.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+  <children>
+    <MenuBar prefHeight="25.0" prefWidth="1475.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem mnemonicParsing="false" text="New" />
+            <MenuItem mnemonicParsing="false" text="Open…" />
+            <Menu mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem mnemonicParsing="false" text="Save" />
+            <MenuItem mnemonicParsing="false" text="Save As…" />
+            <MenuItem mnemonicParsing="false" text="Revert" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Preferences…" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Quit" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Undo" />
+            <MenuItem mnemonicParsing="false" text="Redo" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Cut" />
+            <MenuItem mnemonicParsing="false" text="Copy" />
+            <MenuItem mnemonicParsing="false" text="Paste" />
+            <MenuItem mnemonicParsing="false" text="Delete" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Select All" />
+            <MenuItem mnemonicParsing="false" text="Unselect All" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    <SplitPane dividerPositions="0.1260239445494644, 0.8286074354127284" focusTraversable="true" prefHeight="562.0" prefWidth="1418.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane prefHeight="573.0" prefWidth="177.0">
+          <children>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Customer" textAlignment="CENTER" wrapText="false">
+              <font>
+                <Font size="18.0" fx:id="x1" />
+              </font>
+            </Label>
+                  <TableView fx:id="customerTable" layoutX="11.0" layoutY="41.0" prefHeight="498.0" prefWidth="170.0">
+                    <columns>
+                        <TableColumn fx:id="customerID" prefWidth="41.600008964538574" text="ID" />
+                      <TableColumn fx:id="customerName" prefWidth="129.0" text="Name" />
+                    </columns>
+                  </TableView>
+          </children>
+        </AnchorPane>
+      <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="561.0" prefWidth="1125.0">
+        <children>
+          <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Calendar" textAlignment="CENTER" wrapText="false" />
+                  <Button fx:id="addAppointment" layoutX="111.0" layoutY="474.0" mnemonicParsing="false" onMouseClicked="#addAppointment" prefHeight="26.0" prefWidth="160.0" text="Add" />
+                  <Button fx:id="updateAppointment" layoutX="475.0" layoutY="474.0" mnemonicParsing="false" onMouseClicked="#updateAppointment" prefHeight="26.0" prefWidth="160.0" text="Update" />
+                  <Button fx:id="deleteAppointment" layoutX="821.0" layoutY="474.0" mnemonicParsing="false" onMouseClicked="#deleteAppointment" prefHeight="26.0" prefWidth="160.0" text="Delete" />
+                  <TableView fx:id="appointmentTable" layoutX="10.0" layoutY="41.0" prefHeight="410.0" prefWidth="1090.0">
+                    <columns>
+                        <TableColumn fx:id="tableId" prefWidth="54.40001106262207" text="ID" />
+                        <TableColumn fx:id="tableTitle" prefWidth="140.0" text="Title" />
+                      <TableColumn fx:id="tableType" prefWidth="90.0" text="Type" />
+                      <TableColumn fx:id="tableContact" prefWidth="122.0" text="Contact" />
+                        <TableColumn fx:id="tableLocation" minWidth="0.0" prefWidth="105.60000610351562" text="Location" />
+                      <TableColumn fx:id="tableStartTime" prefWidth="118.0" text="Start Time" />
+                        <TableColumn fx:id="tableEndTime" minWidth="0.0" prefWidth="141.0" text="End Time" />
+                        <TableColumn fx:id="tableDescription" prefWidth="218.0" text="Description" />
+                        <TableColumn fx:id="tableUrl" minWidth="0.0" prefWidth="99.0" text="URL" />
+                    </columns>
+                  </TableView>
+        </children>
+      </AnchorPane>
+        <AnchorPane prefHeight="573.0" prefWidth="363.0">
+          <children>
+            <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Options" textAlignment="CENTER" wrapText="false" />
+                  <Button fx:id="backAppointment" layoutX="100.0" layoutY="510.0" mnemonicParsing="false" onMouseClicked="#backAppointment" prefHeight="26.0" prefWidth="77.0" text="Back" />
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="61.0" style="&#10;" text="Calendar View" textAlignment="CENTER" wrapText="false" />
+                  <RadioButton fx:id="weeklyView" layoutX="28.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#weeklyView" text="Weekly" />
+                  <RadioButton fx:id="monthlyView" layoutX="27.0" layoutY="111.0" mnemonicParsing="false" onMouseClicked="#monthlyView" text="Monthly" />
+                  <Label layoutX="14.0" layoutY="161.0" text="Daylight Savings" />
+                  <RadioButton fx:id="daylightSavingsOn" disable="true" layoutX="29.0" layoutY="188.0" mnemonicParsing="false" onMouseClicked="#weeklyView" text="On" />
+                  <RadioButton fx:id="daylightSavingsOff" disable="true" layoutX="28.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#monthlyView" text="Off" />
+                  <Label fx:id="daylightSavingsText" layoutX="3.0" layoutY="242.0" prefHeight="130.0" prefWidth="160.0" textAlignment="CENTER" wrapText="true" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</VBox>
